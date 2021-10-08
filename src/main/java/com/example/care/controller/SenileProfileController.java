@@ -30,13 +30,13 @@ public class SenileProfileController {
 		return mapper.getSenileProfileList();
 	}
 	
-	@PutMapping("/senile/{s_id}")
+	@PostMapping("/senile/{s_id}")
 	public void putSenileProfile(@PathVariable("s_id") String s_id, @RequestParam("s_password") String s_password, @RequestParam("s_name") String s_name, @RequestParam("s_phone") String s_phone, 
 			@RequestParam("s_gender") String s_gender, @RequestParam("s_address") String s_address, @RequestParam("s_birth") String s_birth) {
 		mapper.insertSenileProfile(s_id, s_password, s_name, s_phone, s_gender, s_address, s_birth);
 	}
 	
-	@PostMapping("/senile/{s_id}")
+	@PutMapping("/senile/{s_id}")
 	public void postSenileProfile(@PathVariable("s_id") String s_id, @RequestParam("s_name") String s_name, 
 			@RequestParam("s_phone") String s_phone, @RequestParam("s_address") String s_address) {
 		mapper.updateSenileProfile(s_id, s_name, s_phone, s_address);
@@ -46,7 +46,5 @@ public class SenileProfileController {
 	public void deleteSenileProfile(@PathVariable("s_id") String s_id) {
 		mapper.deleteSenileProfile(s_id);
 	}
-	
-	//test 10-09
 }
 	
