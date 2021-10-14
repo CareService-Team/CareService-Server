@@ -31,13 +31,20 @@ public class WelfareworkerController {
 	}
 	
 	@PostMapping("/welfareworker/{w_id}")
-	public void postWelfareworker(@PathVariable("w_id") String w_id, @RequestParam("w_password") String w_password, @RequestParam("w_name") String w_name, 
-			@RequestParam("w_phone") String w_phone, @RequestParam("w_gender") String w_gender, @RequestParam("w_birth") String w_birth) {
+	public void postWelfareworker(
+			@PathVariable("w_id") String w_id, 
+			@RequestParam("w_password") String w_password, 
+			@RequestParam("w_name") String w_name, 
+			@RequestParam("w_phone") String w_phone, 
+			@RequestParam("w_gender") String w_gender, 
+			@RequestParam("w_birth") String w_birth) {
 		mapper.insertWelfareworker(w_id, w_password, w_name, w_phone, w_gender, w_birth);
 	}
 	
 	@PutMapping("/welfareworker/{w_id}")
-	public void putWelfareworker(@PathVariable("w_id") String w_id, @RequestParam("w_name") String w_name, 
+	public void putWelfareworker(
+			@PathVariable("w_id") String w_id, 
+			@RequestParam("w_name") String w_name, 
 			@RequestParam("w_phone") String w_phone) {
 		mapper.updateWelfareworker(w_id, w_name, w_phone);
 	}

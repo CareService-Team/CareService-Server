@@ -1,6 +1,6 @@
 package com.example.care.model;
 
-public class SenileProfile {
+public class Senile {
 	private String s_id;
 	private String s_password;
 	private String s_name;
@@ -9,7 +9,7 @@ public class SenileProfile {
 	private String s_address;
 	private String s_birth;
 	
-	public SenileProfile(String s_id, String s_password, String s_name, String s_phone, String s_gender,
+	public Senile(String s_id, String s_password, String s_name, String s_phone, String s_gender,
 			String s_address, String s_birth) {
 		super();
 		this.s_id = s_id;
