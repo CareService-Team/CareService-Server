@@ -30,19 +30,19 @@ public class SenileThingController {
 		return mapper.getSenileThingList();
 	}
 	
-	@PostMapping("/senilething/{s_address}")
-	public void putSenileThing(
+	@PostMapping("/senilething/{s_address}/{request_date}")
+	public void postSenileThing(
 			@PathVariable("s_address") String s_address, 
 			@RequestParam("t_name") String t_name, 
 			@RequestParam("t_count") String t_count,
 			@RequestParam("t_id") String t_id,
 			@RequestParam("s_id") String s_id,
-			@RequestParam("request_date") String request_date) {
+			@PathVariable("request_date") String request_date) {
 		mapper.insertSenileThing(s_address, t_name, t_count, t_id, s_id, request_date);
 	}
 	
 	@PutMapping("/senilething/{s_address}/{request_date}")
-	public void postSenileThing(
+	public void pustSenileThing(
 			@PathVariable("s_address") String s_address, 
 			@PathVariable("request_date") String request_date,
 			@RequestParam("t_count") String t_count) {
